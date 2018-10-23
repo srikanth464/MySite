@@ -1,11 +1,11 @@
-const sleepIn = (weekday,vacation) => {
-    if(!weekday || vacation){
+const monkeyTrouble = (aSmile,bSmile) => {
+    if((aSmile && bSmile) || (!aSmile && !bSmile)){
         console.log("true");
-    } else {
+    }else{
         console.log("false");
     }
 }
 
-sleepIn(false, false);
-sleepIn(true, false);
-sleepIn(false, true);
+monkeyTrouble(true, true);
+monkeyTrouble(false, false);
+monkeyTrouble(true, false);
