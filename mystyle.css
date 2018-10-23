@@ -1,0 +1,243 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+body {font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif; color: #424242; line-height: 1.4;}
+
+/* Fonts */
+h1 {
+  font-family: "rooney-web", 'AmericanTypewriter', Rockwell, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.container {
+  margin: 2em auto;
+  max-width: 630px;
+  text-align: center;
+}
+
+/* COLORS: 
+  blue: #20A1D4;
+  green: #1CBC2C;
+  orange: #EF5F3C;
+  black: #424242;
+  grey: #777;
+  light grey: #eaeaea;
+*/
+
+/* Your CSS goes here */
+hr {
+  margin: 50px 0 100px;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.card {
+  position: relative;
+  text-align: left;
+  width: 263px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px #f5f5f5;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card .tooltip {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  left: 0;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 100;
+  font-size: .75em;
+  background-color: #424242;
+}
+
+.card .tooltip .arrow {
+  position: absolute;
+  border-top: 7px solid #424242;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  right: 30px;
+  bottom: -7px;
+}
+
+.card .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.card .progress-bar .progress {
+  background-color: #EF5F3C;
+  width: 75%;
+  height: 100%;
+}
+
+
+.card p {
+  font-size: .75em;
+  font-weight: 100;
+  color: #888;
+}
+
+.card p:not(:first-child) {
+  margin: 15px 0;
+}
+
+.card form {
+  font-size: 0;
+  position: relative;
+}
+
+.card form .prefix {
+  font-size: 1rem;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: #888;
+  font-family: sans-serif;
+}
+
+.card form input {
+  font-size: 1rem;
+  display: inline-block;
+  width: 47%;
+  padding: 15px 15px 15px 22px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  margin-right: 3%;
+  font-weight: 500;
+}
+
+.card form button {
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #1CBC2C;
+  width: 47%;
+  margin-left: 3%;
+  border: 0;
+  color: white;
+  font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+  padding: 15px 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.card a {
+  color: #20A1D4;
+  font-size: .75rem;
+  font-style: italic;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+
+.highlight-clr {
+  color: #EF5F3C;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.row .col {
+  box-sizing: border-box;
+}
+
+.row .col:not(:last-child) {
+  padding-right: 5px;
+}
+
+.row .col:not(:first-child) {
+  padding-left: 5px;
+}
+
+.col {
+  flex: 1 1 auto;
+}
+
+.col button {
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  color: #777;
+  font-weight: 600;
+  box-shadow: 0 1px #ddd;
+}
+
+.with-card {
+  width: 263px;
+  margin: 12px auto 0;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
